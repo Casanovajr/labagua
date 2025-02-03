@@ -98,8 +98,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</li>
 							<li>
 								<h3>Lorem ipsum dolor? </h3>
-								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p> <i style="color: orange;">--find out more</i>
-								<h3>Lorem ipsum dolor? </h3>		
+								<p>Teste lab Agua</p>
+									
 							</li>
 						</ul>
 					</div>
