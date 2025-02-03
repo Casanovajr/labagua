@@ -82,7 +82,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 							</li>
 							<li>
-								<h3>Our Mission.. </h3>
+								<h3>Lab àgua.. </h3>
 								<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
 
 							</li>
