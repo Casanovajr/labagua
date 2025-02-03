@@ -1,193 +1,176 @@
-
 <?php ob_start();
-    session_start();
+session_start();
 
 
 
-        // LOGIN SCRIPT
+// LOGIN SCRIPT
 
 
-  /* DATABASE CONNECTION*/
+/* DATABASE CONNECTION*/
 
 
-        $db['db_host'] = '127.0.0.1';
-        $db['db_user'] = 'u863616108_nds';
-        $db['db_pass'] = 'sS8&0TgiIY5';
-        $db['db_name'] = 'u863616108_labagua';
+$db['db_host'] = '127.0.0.1';
+$db['db_user'] = 'u863616108_nds';
+$db['db_pass'] = 'sS8&0TgiIY5';
+$db['db_name'] = 'u863616108_labagua';
 
-      foreach($db as $key=>$value){
-          define(strtoupper($key),$value);
-      }
-      global $connection;
-      $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME, 3306);
-      if(!$connection){
-          die("Cannot Establish A Secure Connection To The Host Server At The Moment!");
-      }
+foreach ($db as $key => $value) {
+    define(strtoupper($key), $value);
+}
+global $conn;
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+if (!$conn) {
+    die("Cannot Establish A Secure Connection To The Host Server At The Moment!");
+}
 
-      try{
-          $db = new PDO('mysql:dbhost=127.0.0.1;dbname=u863616108_labagua;charset=utf8','u863616108_nds','sS8&0TgiIY5');
+try {
+    $db = new PDO('mysql:dbhost=127.0.0.1;dbname=u863616108_labagua;charset=utf8', 'u863616108_nds', 'sS8&0TgiIY5');
+} catch (Exception $e) {
 
+    die('Cannot Establish A Secure Connection To The Host Server At The Moment!');
+}
 
-      }
-      catch(Exception $e){
-
-          die('Cannot Establish A Secure Connection To The Host Server At The Moment!');
-      }
-
-      /*DATABASE CONNECTION */
+/*DATABASE CONNECTION */
 
 
-      // Define variables and initialize with empty values
+// Define variables and initialize with empty values
 
-      $email = $password = "";
+$email = $password = "";
 
-      $email_err = $password_err = "";
+$email_err = $password_err = "";
 
 
 
-      // Processing form data when form is submitted
+// Processing form data when form is submitted
 
-      if($_SERVER["REQUEST_METHOD"] == "POST"){
-
-
-
-          // Check if email is empty
-
-          if(empty(trim($_POST["email"]))){
-
-              $email_err = 'Please enter an email address.';
-
-          } else{
-
-              $email = trim($_POST["email"]);
-
-          }
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 
 
-          // Check if password is empty
+    // Check if email is empty
 
-          if(empty(trim($_POST['password']))){
+    if (empty(trim($_POST["email"]))) {
 
-              $password_err = 'Please enter your password.';
+        $email_err = 'Please enter an email address.';
+    } else {
 
-          } else{
-
-              $password = trim($_POST['password']);
-
-          }
+        $email = trim($_POST["email"]);
+    }
 
 
 
-          // Validate credentials
+    // Check if password is empty
 
-          if(empty($email_err) && empty($password_err)){
+    if (empty(trim($_POST['password']))) {
 
-              // Prepare a select statement
+        $password_err = 'Please enter your password.';
+    } else {
 
-              $sql = "SELECT email, password FROM admin WHERE email = ?";
+        $password = trim($_POST['password']);
+    }
 
 
 
-              if($stmt = mysqli_prepare($conn, $sql)){
+    // Validate credentials
 
-                  // Bind variables to the prepared statement as parameters
+    if (empty($email_err) && empty($password_err)) {
 
-                  mysqli_stmt_bind_param($stmt, "s", $param_email);
+        // Prepare a select statement
 
-                  // Set parameters
+        $sql = "SELECT email, password FROM admin WHERE email = ?";
 
-                  $param_email = $email;
 
-                  // Attempt to execute the prepared statement
 
-                  if(mysqli_stmt_execute($stmt)){
+        if ($stmt = mysqli_prepare($conn, $sql)) {
 
-                      // Store result
+            // Bind variables to the prepared statement as parameters
 
-                      mysqli_stmt_store_result($stmt);
+            mysqli_stmt_bind_param($stmt, "s", $param_email);
 
-                      // Check if email exists, if yes then verify password
+            // Set parameters
 
-                      if(mysqli_stmt_num_rows($stmt) == 1){
+            $param_email = $email;
 
-                          // Bind result variables
+            // Attempt to execute the prepared statement
 
-                          mysqli_stmt_bind_result($stmt, $email, $hashed_password);
+            if (mysqli_stmt_execute($stmt)) {
 
-                          if(mysqli_stmt_fetch($stmt)){
+                // Store result
 
-                              if(password_verify($password, $hashed_password)){
+                mysqli_stmt_store_result($stmt);
 
-                                  /* Password is correct, so start a new session and
+                // Check if email exists, if yes then verify password
+
+                if (mysqli_stmt_num_rows($stmt) == 1) {
+
+                    // Bind result variables
+
+                    mysqli_stmt_bind_result($stmt, $email, $hashed_password);
+
+                    if (mysqli_stmt_fetch($stmt)) {
+
+                        if (password_verify($password, $hashed_password)) {
+
+                            /* Password is correct, so start a new session and
 
                                   save the email to the session */
 
-                                  
 
-                                  $_SESSION['email'] = $email;
 
-                                  // $sql = "SELECT department FROM employees WHERE email='$email'" ;
-                                  $statement = mysqli_query($conn, $sql);
+                            $_SESSION['email'] = $email;
 
-                                    header("Location: index.php");
+                            // $sql = "SELECT department FROM employees WHERE email='$email'" ;
+                            $statement = mysqli_query($conn, $sql);
 
-                                // Close statement
+                            header("Location: index.php");
 
-                                //mysqli_stmt_close($statement);
+                            // Close statement
 
-                                //header("location: sales");
+                            //mysqli_stmt_close($statement);
 
-                              } else{
+                            //header("location: sales");
 
-                                  // Display an error message if password is not valid
+                        } else {
 
-                                  $password_err = 'The password you entered was not valid. Please try again.';
+                            // Display an error message if password is not valid
 
-                              }
+                            $password_err = 'The password you entered was not valid. Please try again.';
+                        }
+                    }
+                } else {
 
-                          }
+                    // Display an error message if email doesn't exist
 
-                      } else{
+                    $email_err = 'No account found with that email. Please recheck and try again.';
+                }
+            } else {
 
-                          // Display an error message if email doesn't exist
-
-                          $email_err = 'No account found with that email. Please recheck and try again.';
-
-                      }
-
-                  } else{
-
-                      echo "Oops! Something went wrong. Please try again later.";
-
-                  }
-
-              }
+                echo "Oops! Something went wrong. Please try again later.";
+            }
+        }
 
 
 
-              // Close statement
+        // Close statement
 
-              mysqli_stmt_close($stmt);
-
-          }
-
-
-
-          // Close connection
-
-          mysqli_close($conn);
-
-      }
+        mysqli_stmt_close($stmt);
+    }
 
 
 
-      ?>
+    // Close connection
 
-    <!--- LOGIN SCRIPT----->
+    mysqli_close($conn);
+}
 
 
-    
+
+?>
+
+<!--- LOGIN SCRIPT----->
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -224,10 +207,10 @@
     <section id="wrapper" class="login-register">
         <div class="login-box">
             <div class="white-box">
-                <form class="form-horizontal form-material" id="loginform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post">
+                <form class="form-horizontal form-material" id="loginform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <h3 class="box-title m-b-20">Sign In</h3>
-                     <p style="color:red;">  <?php echo $email_err; ?> </p>
-                <p style="color:red;">  <?php echo $password_err; ?> </p>
+                    <p style="color:red;"> <?php echo $email_err; ?> </p>
+                    <p style="color:red;"> <?php echo $password_err; ?> </p>
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <input class="form-control" type="email" name="email" required="" placeholder="Email">
@@ -240,11 +223,11 @@
                     </div>
                     <div class="form-group">
                         <div class="col-md-12">
-                           <!--  <div class="checkbox checkbox-primary pull-left p-t-0">
+                            <!--  <div class="checkbox checkbox-primary pull-left p-t-0">
                                 <input id="checkbox-signup" type="checkbox">
                                 <label for="checkbox-signup"> Remember me </label>
                             </div> -->
-                           <!--  <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a>  -->
+                            <!--  <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right"><i class="fa fa-lock m-r-5"></i> Forgot pwd?</a>  -->
                         </div>
                     </div>
                     <div class="form-group text-center m-t-20">
@@ -252,10 +235,10 @@
                             <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" name="submit">Log In</button>
                         </div>
                     </div>
-                    
-                   
+
+
                 </form>
-               <!--  <form class="form-horizontal" id="recoverform" action="index.php">
+                <!--  <form class="form-horizontal" id="recoverform" action="index.php">
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <h3>Recover Password</h3>
