@@ -42,7 +42,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/icon.png">
-    <title>Website Admin</title>
+    <title>Área Administrativa</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -75,7 +75,7 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="../plugins/images/icon.png" style="width: 30px; height: 30px;" alt="home" /></b><span class="hidden-xs"><b>Company</b></span></a></div>
+                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="../plugins/images/icon.png" style="width: 30px; height: 30px;" alt="home" /></b><span class="hidden-xs"><b>LabÁgua</b></span></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
@@ -104,51 +104,51 @@
                     <li class="sidebar-search hidden-sm hidden-md hidden-lg">
                         <!-- input-group -->
                         <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+                            <input type="text" class="form-control" placeholder="Pesquisar..."> <span class="input-group-btn">
                             <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
                             </span> 
                         </div>
                         <!-- /input-group -->
                     </li>
                     <li class="user-pro">
-                        <a href="#" class="waves-effect"><img src="../plugins/images/user.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Account<span class="fa arrow"></span></span>
+                        <a href="#" class="waves-effect"><img src="../plugins/images/user.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Conta<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="settings.php"><i class="ti-settings"></i> Account Setting</a></li>
-                            <li><a href="functions/logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="settings.php"><i class="ti-settings"></i> Configuração de Conta</a></li>
+                            <li><a href="functions/logout.php"><i class="fa fa-power-off"></i> Sair</a></li>
                         </ul>
                     </li>
-                    <li class="nav-small-cap m-t-10">--- Main Menu</li>
+                    <li class="nav-small-cap m-t-10">---  Menu Principal</li>
                     <li> <a href="index.php" class="waves-effect active"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </a>
                     </li>
                    
                     
-                   <li> <a href="#" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Blog<span class="fa arrow"></span></span></a>
+                   <li> <a href="#" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Artigos<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="posts.php">All Posts</a></li>
-                            <li><a href="new-post.php">Create Post</a></li>
-                            <li><a href="comments.php" class="waves-effect">Comments</a>
+                            <li><a href="posts.php">Todas as Postagens</a></li>
+                            <li><a href="new-post.php">Criar Postagem</a></li>
+                            <li><a href="comments.php" class="waves-effect">Comentários</a>
                             </li>
                         </ul>
                     </li>
                    
-                   <li><a href="inbox.php" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Messages</span></a>
+                   <li><a href="inbox.php" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Mensagens</span></a>
                     </li>
 
-                    <li><a href="subscribers.php" class="waves-effect"><i data-icon="n" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Subscribers</span></a>
+                    <li><a href="subscribers.php" class="waves-effect"><i data-icon="n" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Inscritos</span></a>
                     </li>
                     
-                     <li class="nav-small-cap">--- Other</li>
+                     <li class="nav-small-cap">--- Outros</li>
 
-                    <li> <a href="#" class="waves-effect"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Access<span class="fa arrow"></span></span></a>
+                    <li> <a href="#" class="waves-effect"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Acesso<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="users.php">Administrators</a></li>
-                            <li><a href="new-user.php">Create Admin</a></li>
+                            <li><a href="users.php">Administradores</a></li>
+                            <li><a href="new-user.php">Criar Administrador</a></li>
                             
                         </ul>
                     </li>
                     
-                    <li><a href="functions/logout.php" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Log out</span></a></li>
+                    <li><a href="functions/logout.php" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Sair</span></a></li>
                    
                 </ul>
             </div>
@@ -163,7 +163,7 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li class="active">Home</li>
+                            <li class="active">Início</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -189,7 +189,7 @@
                                 <div class="col-lg-3 col-sm-6 row-in-br">
                                     <div class="col-in row">
                                         <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
-                                            <h5 class="text-muted vb">Company Blog Posts</h5> </div>
+                                            <h5 class="text-muted vb">LabÁgua Artigos Publicados</h5> </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h3 class="counter text-right m-t-15 text-danger"><?php echo mysqli_num_rows($query_posts);?></h3> </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -202,7 +202,7 @@
                                 <div class="col-lg-3 col-sm-6 row-in-br  b-r-none">
                                     <div class="col-in row">
                                         <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe01b;"></i>
-                                            <h5 class="text-muted vb">Blog Comments</h5> </div>
+                                            <h5 class="text-muted vb">Artigos Comentados</h5> </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h3 class="counter text-right m-t-15 text-megna"><?php echo mysqli_num_rows($query_comments);?></h3> </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -215,7 +215,7 @@
                                 <div class="col-lg-3 col-sm-6 row-in-br">
                                     <div class="col-in row">
                                         <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe00b;"></i>
-                                            <h5 class="text-muted vb">Contact Messages</h5> </div>
+                                            <h5 class="text-muted vb">Mensagens</h5> </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h3 class="counter text-right m-t-15 text-primary"><?php echo mysqli_num_rows($query_contacts);?></h3> </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -228,7 +228,7 @@
                                 <div class="col-lg-3 col-sm-6  b-0">
                                     <div class="col-in row">
                                         <div class="col-md-6 col-sm-6 col-xs-6"> <i class="linea-icon linea-basic" data-icon="&#xe016;"></i>
-                                            <h5 class="text-muted vb">Company Subscribers</h5> </div>
+                                            <h5 class="text-muted vb">Inscritos</h5> </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h3 class="counter text-right m-t-15 text-success"><?php echo mysqli_num_rows($query_subscribers);?></h3> </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -247,7 +247,7 @@
                 <div class="row">
                     <div class="col-md-12 col-lg-6 col-sm-12">
                         <div class="white-box">
-                            <h3 class="box-title">Recent Comments</h3>
+                            <h3 class="box-title">Comentários Recentes</h3>
                             <div class="comment-center">
                                 <div class="comment-body">
                                     <div class="mail-contnet">
@@ -279,7 +279,7 @@
                                         } } }
                                     ?>
                                     <hr>
-                                     <a href="comments.php" class="btn btn-info btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">View All Comments</a>
+                                     <a href="comments.php" class="btn btn-info btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Ver Todos os Comentários</a>
                                     </div>
 
                                 </div>
@@ -302,8 +302,8 @@
                             </h3> -->
                             <div class="row sales-report">
                                 <div class="col-md-6 col-sm-6 col-xs-6">
-                                    <h2>Company 2018</h2>
-                                    <p>Blog Posts</p>
+                                    <h2>LabÁgua</h2>
+                                    <p>Artigos Postados</p>
                                 </div>
                                 <div class="col-md-6 col-sm-6 col-xs-6 ">
                                     <h1 class="text-right text-success m-t-20"><?php echo mysqli_num_rows($query_posts);?></h1> </div>
@@ -352,7 +352,7 @@
                                     </tbody>
 
                                 </table> 
-                                       <a href="posts.php" class="btn btn-info btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">View All Posts</a>
+                                       <a href="posts.php" class="btn btn-info btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Ver Todos os Artigos</a>
                                      </div>
                         </div>
                     </div>
@@ -362,38 +362,38 @@
                 <!-- .right-sidebar -->
                 <div class="right-sidebar">
                     <div class="slimscrollright">
-                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="rpanel-title"> Painel de Controle <span><i class="ti-close right-side-toggle"></i></span> </div>
                         <div class="r-panel-body">
                             <ul>
-                                <li><b>Layout Options</b></li>
+                                <li><b>Personalização</b></li>
                                 <li>
                                     <div class="checkbox checkbox-info">
                                         <input id="checkbox1" type="checkbox" class="fxhdr">
-                                        <label for="checkbox1"> Fix Header </label>
+                                        <label for="checkbox1"> Fixar Cabeçalho </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="checkbox checkbox-warning">
                                         <input id="checkbox2" type="checkbox" class="fxsdr">
-                                        <label for="checkbox2"> Fix Sidebar </label>
+                                        <label for="checkbox2"> Fixar Barra Lateral </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="checkbox checkbox-success">
                                         <input id="checkbox4" type="checkbox" class="open-close">
-                                        <label for="checkbox4"> Toggle Sidebar </label>
+                                        <label for="checkbox4"> Alternar Barra Lateral </label>
                                     </div>
                                 </li>
                             </ul>
                             <ul id="themecolors" class="m-t-20">
-                                <li><b>With Light sidebar</b></li>
+                                <li><b>Com Barra Lateral Claro</b></li>
                                 <li><a href="javascript:void(0)" theme="default" class="default-theme">1</a></li>
                                 <li><a href="javascript:void(0)" theme="green" class="green-theme">2</a></li>
                                 <li><a href="javascript:void(0)" theme="gray" class="yellow-theme">3</a></li>
                                 <li><a href="javascript:void(0)" theme="blue" class="blue-theme working">4</a></li>
                                 <li><a href="javascript:void(0)" theme="purple" class="purple-theme">5</a></li>
                                 <li><a href="javascript:void(0)" theme="megna" class="megna-theme">6</a></li>
-                                <li><b>With Dark sidebar</b></li>
+                                <li><b>Com Barra Lateral Escuro</b></li>
                                 <br/>
                                 <li><a href="javascript:void(0)" theme="default-dark" class="default-dark-theme">7</a></li>
                                 <li><a href="javascript:void(0)" theme="green-dark" class="green-dark-theme">8</a></li>
@@ -409,7 +409,7 @@
                 <!-- /.right-sidebar -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2018 &copy; Company Admin </footer>
+            <footer class="footer text-center"> 2025 &copy; LabÁgua</footer>
         </div>
         <!-- /#page-wrapper -->
     </div>
@@ -442,8 +442,8 @@
     <script type="text/javascript">
     $(document).ready(function() {
         $.toast({
-            heading: 'Welcome to Company admin',
-            text: 'view, edit and upload new posts to keep your users engaged.',
+            heading: 'Bem vindo a área administrativa do LabÁgua',
+            text: 'Gerencie todos os artigos e mensagens do site aqui.',
             position: 'top-right',
             loaderBg: '#ff6849',
             icon: 'info',
