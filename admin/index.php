@@ -80,7 +80,7 @@
                     <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
                         <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                            <input type="text" placeholder="Pesquisar..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                 </ul>
                 <ul class="nav navbar-top-links navbar-right pull-right">
@@ -189,7 +189,7 @@
                                 <div class="col-lg-3 col-sm-6 row-in-br">
                                     <div class="col-in row">
                                         <div class="col-md-6 col-sm-6 col-xs-6"> <i data-icon="E" class="linea-icon linea-basic"></i>
-                                            <h5 class="text-muted vb">LabÁgua Artigos Publicados</h5> </div>
+                                            <h5 class="text-muted vb">Artigos Publicados</h5> </div>
                                         <div class="col-md-6 col-sm-6 col-xs-6">
                                             <h3 class="counter text-right m-t-15 text-danger"><?php echo mysqli_num_rows($query_posts);?></h3> </div>
                                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -321,9 +321,9 @@
                                                         echo '
                                                              <thead>
                                                             <tr>
-                                                                <th>TITLE</th>
-                                                                <th>DATE</th>
-                                                                <th>COMMENTS</th>
+                                                                <th>TITULO</th>
+                                                                <th>DATA</th>
+                                                                <th>COMENTÁRIOS</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
