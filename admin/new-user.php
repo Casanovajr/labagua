@@ -31,7 +31,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/icon.png">
-    <title>Company Admin | Create Admin</title>
+    <title>Área Administrativa</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -62,12 +62,12 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="../plugins/images/icon.png" style="width: 30px; height: 30px;" alt="home" /></b><span class="hidden-xs"><b>Company</b></span></a></div>
+                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="../plugins/images/icon.png" style="width: 30px; height: 30px;" alt="home" /></b><span class="hidden-xs"><b>LabÁgua</b></span></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
                         <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                            <input type="text" placeholder="Pesquisar..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                 </ul>
                 <ul class="nav navbar-top-links navbar-right pull-right">
@@ -91,49 +91,49 @@
                     <li class="sidebar-search hidden-sm hidden-md hidden-lg">
                         <!-- input-group -->
                         <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+                            <input type="text" class="form-control" placeholder="Pesquisar..."> <span class="input-group-btn">
             <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
             </span> </div>
                         <!-- /input-group -->
                     </li>
                     <li class="user-pro">
-                        <a href="#" class="waves-effect"><img src="../plugins/images/user.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Account<span class="fa arrow"></span></span>
+                        <a href="#" class="waves-effect"><img src="../plugins/images/user.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Conta<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="settings.php"><i class="ti-settings"></i> Account Setting</a></li>
-                            <li><a href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="settings.php"><i class="ti-settings"></i> Configuração de Conta</a></li>
+                            <li><a href="login.php"><i class="fa fa-power-off"></i> Sair</a></li>
                         </ul>
                     </li>
-                    <li class="nav-small-cap m-t-10">--- Main Menu</li>
+                    <li class="nav-small-cap m-t-10">--- Menu Principal</li>
                     <li> <a href="index.php" class="waves-effect"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </a>
                     </li>
                    
                     
-                   <li> <a href="#" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Blog<span class="fa arrow"></span></span></a>
+                   <li> <a href="#" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Artigo<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="posts.php">All Posts</a></li>
-                            <li><a href="new-post.php">Create Post</a></li>
-                            <li><a href="comments.php" class="waves-effect">Comments</a>
+                            <li><a href="posts.php">Todos as Postagens</a></li>
+                            <li><a href="new-post.php">Criar Postagem</a></li>
+                            <li><a href="comments.php" class="waves-effect">Comentários</a>
                             </li>
                         </ul>
                     </li>
                    
-                   <li><a href="inbox.php" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Messages</span></a>
+                   <li><a href="inbox.php" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Mensagens</span></a>
                     </li>
 
-                    <li><a href="subscribers.php" class="waves-effect"><i data-icon="n" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Subscribers</span></a>
+                    <li><a href="subscribers.php" class="waves-effect"><i data-icon="n" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Inscritos</span></a>
                     </li>
                     
-                     <li class="nav-small-cap">--- Other</li>
-                    <li> <a href="#" class="waves-effect active"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Access<span class="fa arrow"></span></span></a>
+                     <li class="nav-small-cap">--- Outros</li>
+                    <li> <a href="#" class="waves-effect active"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Acesso<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="users.php">Administrators</a></li>
-                            <li><a href="new-user.php">Create Admin</a></li>
+                            <li><a href="users.php">Administradores</a></li>
+                            <li><a href="new-user.php">Criar Administrador</a></li>
                             
                         </ul>
                     </li>
                     
-                    <li><a href="login.php" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Log out</span></a></li>
+                    <li><a href="login.php" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Sair</span></a></li>
                    
                 </ul>
             </div>
@@ -148,8 +148,8 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Administrators</a></li>
-                            <li class="active">New</li>
+                            <li><a href="#">Administradores</a></li>
+                            <li class="active">Novo</li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -158,37 +158,37 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="white-box">
-                            <h3 class="box-title m-b-0">Creating A New Admin</h3>
-                            <p class="text-muted m-b-30 font-13"> Fill in the form below: </p>
+                            <h3 class="box-title m-b-0">Criar um Novo Administrador</h3>
+                            <p class="text-muted m-b-30 font-13"> Preencha abaixo: </p>
                             <div class="row">
                                 <div class="col-sm-12 col-xs-12">
                                     <form action="functions/new_admin.php" method="post">
                                         <!-- <div class="form-group">
-                                            <label for="exampleInputuname">User Name</label>
+                                            <label for="exampleInputuname">Nome do Usuário</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon"><i class="ti-user"></i></div>
                                                 <input type="text" class="form-control" id="exampleInputuname" placeholder="Username"> </div>
                                         </div> -->
                                         <div class="form-group">
-                                            <label for="exampleInputEmail1">Email address</label>
+                                            <label for="exampleInputEmail1">Email</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon"><i class="ti-email"></i></div>
-                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" required=""> </div>
+                                                <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Digite seu email" required=""> </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputpwd1">Password</label>
+                                            <label for="exampleInputpwd1">Senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon"><i class="ti-lock"></i></div>
-                                                <input type="password" name="password" id="Password" class="form-control" id="exampleInputpwd1" placeholder="Enter Password" required=""> </div>
+                                                <input type="password" name="password" id="Password" class="form-control" id="exampleInputpwd1" placeholder="Digite sua senha" required=""> </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="exampleInputpwd2">Confirm Password</label>
+                                            <label for="exampleInputpwd2">Confirme sua Senha</label>
                                             <div class="input-group">
                                                 <div class="input-group-addon"><i class="ti-lock"></i></div>
-                                                <input type="password" name="password2" id="ConfirmPassword" class="form-control" id="exampleInputpwd2" placeholder="Confirm Password" required=""> </div>
+                                                <input type="password" name="password2" id="ConfirmPassword" class="form-control" id="exampleInputpwd2" placeholder="Confirme sua Senha" required=""> </div>
                                                 <div id="msg" style="padding-left: 10px;"></div>
                                         </div>
-                                        <button type="submit" name="submit" class="btn btn-success waves-effect waves-light m-r-10">Submit</button>
+                                        <button type="submit" name="submit" class="btn btn-success waves-effect waves-light m-r-10">Criar Conta</button>
                                     </form>
                                 </div>
                             </div>
@@ -204,38 +204,38 @@
                 <!-- .right-sidebar -->
                 <div class="right-sidebar">
                     <div class="slimscrollright">
-                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="rpanel-title"> Painel de Controle <span><i class="ti-close right-side-toggle"></i></span> </div>
                         <div class="r-panel-body">
                             <ul>
-                                <li><b>Layout Options</b></li>
+                                <li><b>Personalização</b></li>
                                 <li>
                                     <div class="checkbox checkbox-info">
                                         <input id="checkbox1" type="checkbox" class="fxhdr">
-                                        <label for="checkbox1"> Fix Header </label>
+                                        <label for="checkbox1"> Fixar Cabeçalho </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="checkbox checkbox-warning">
                                         <input id="checkbox2" type="checkbox" checked="" class="fxsdr">
-                                        <label for="checkbox2"> Fix Sidebar </label>
+                                        <label for="checkbox2"> Fixar Barra Lateral </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="checkbox checkbox-success">
                                         <input id="checkbox4" type="checkbox" class="open-close">
-                                        <label for="checkbox4"> Toggle Sidebar </label>
+                                        <label for="checkbox4"> Alternar Barra Lateral </label>
                                     </div>
                                 </li>
                             </ul>
                             <ul id="themecolors" class="m-t-20">
-                                <li><b>With Light sidebar</b></li>
+                                <li><b>Com Barra Lateral Claro</b></li>
                                 <li><a href="javascript:void(0)" theme="default" class="default-theme">1</a></li>
                                 <li><a href="javascript:void(0)" theme="green" class="green-theme">2</a></li>
                                 <li><a href="javascript:void(0)" theme="gray" class="yellow-theme">3</a></li>
                                 <li><a href="javascript:void(0)" theme="blue" class="blue-theme working">4</a></li>
                                 <li><a href="javascript:void(0)" theme="purple" class="purple-theme">5</a></li>
                                 <li><a href="javascript:void(0)" theme="megna" class="megna-theme">6</a></li>
-                                <li><b>With Dark sidebar</b></li>
+                                <li><b>Com Barra Lateral Escuro</b></li>
                                 <br/>
                                 <li><a href="javascript:void(0)" theme="default-dark" class="default-dark-theme">7</a></li>
                                 <li><a href="javascript:void(0)" theme="green-dark" class="green-dark-theme">8</a></li>
@@ -250,7 +250,7 @@
                 <!-- /.right-sidebar -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2018 &copy; Company Admin </footer>
+            <footer class="footer text-center"> 2025 &copy; LabÁgua </footer>
         </div>
         <!-- /#page-wrapper -->
     </div>
@@ -278,9 +278,9 @@
                 $(document).ready(function(){
                     $("#ConfirmPassword").keyup(function(){
                          if ($("#Password").val() != $("#ConfirmPassword").val()) {
-                             $("#msg").html("Password do not match").css("color","red");
+                             $("#msg").html("As senhas não são iguais").css("color","red");
                          }else{
-                             $("#msg").html("Password matched").css("color","green");
+                             $("#msg").html("Senha é igual").css("color","green");
                         }
                   });
             });
