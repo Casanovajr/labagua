@@ -2,20 +2,20 @@
 
 <div class="footer">
 		<div class="col-md-4 footer-left-agileits">
-			<h3>Address</h3>
+			<h3>Endereço</h3>
 				<ul>
-					<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Woodvale Grove, Westlands - Nairobi, Kenya</li>
+					<li><span class="glyphicon glyphicon-home" aria-hidden="true"></span>Avenida Perimetral da Ciência km 01, S/N - Guamá, Belém - PA, 66075-750</li>
 					<li><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span><a href="mailto:info@Companyonline.net">info@example.com</a></li>
 					<!-- <li><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> +(254) 754 235 535</li> -->
 				</ul>
 		</div>
 		<div class="col-md-4 footer-left-agileinfo">
-			<h3>Get In Touch</h3>
-			<p>Follow us, Tweet us, Tag us, Pin us.</p>
+			<h3>Entre em contato</h3>
+			<p>Siga-nos</p>
 				<ul class="social-icons">
 					<li><a href="#" class="icon icon-border facebook"></a></li>
 					<li><a href="#" class="icon icon-border twitter"></a></li>
-					<li><a href="#" class="icon icon-border instagram"></a></li>
+					<li><a href="https://www.instagram.com/labagua?igsh=ZmZ2Nzh1d21sajdn" class="icon icon-border instagram"></a></li>
 					<li><a href="#" class="icon icon-border pinterest"></a></li>
 				</ul>
 		</div>
@@ -29,10 +29,11 @@
 		</div>
 		<div class="clearfix"></div>
 	</div>
-<!-- //footer --> 
+<!-- //footer -->
 	<div class="copyright-w3-agile">
 		<div class="container">
-			<p>© 2018 company | All rights reserved.</p>
+			<p><a href="">UEPA</a> |<a href="">CNPQ</a> |<a href="#" >Governo do Pará</a> | <a href="#" >MCTI</a> | <a href="#" >PCT</a> | <a href="#" >Ministério da Saude</a></p>
+            <p>© 2025 company | All rights reserved</p>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
