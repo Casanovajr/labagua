@@ -36,7 +36,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/icon.png">
-    <title>Company Admin</title>
+    <title>Área Administrativa</title>
     <!-- Bootstrap Core CSS -->
    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -67,12 +67,12 @@
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top m-b-0">
             <div class="navbar-header"> <a class="navbar-toggle hidden-sm hidden-md hidden-lg " href="javascript:void(0)" data-toggle="collapse" data-target=".navbar-collapse"><i class="ti-menu"></i></a>
-                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="../plugins/images/icon.png" style="width: 30px; height: 30px;" alt="home" /></b><span class="hidden-xs"><b>Company</b></span></a></div>
+                <div class="top-left-part"><a class="logo" href="index.php"><b><img src="../plugins/images/icon.png" style="width: 30px; height: 30px;" alt="home" /></b><span class="hidden-xs"><b>LabÁgua</b></span></a></div>
                 <ul class="nav navbar-top-links navbar-left hidden-xs">
                     <li><a href="javascript:void(0)" class="open-close hidden-xs waves-effect waves-light"><i class="icon-arrow-left-circle ti-menu"></i></a></li>
                     <li>
                         <form role="search" class="app-search hidden-xs">
-                            <input type="text" placeholder="Search..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
+                            <input type="text" placeholder="Pesquisar..." class="form-control"> <a href=""><i class="fa fa-search"></i></a> </form>
                     </li>
                 </ul>
                 <ul class="nav navbar-top-links navbar-right pull-right">
@@ -96,49 +96,49 @@
                     <li class="sidebar-search hidden-sm hidden-md hidden-lg">
                         <!-- input-group -->
                         <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="Search..."> <span class="input-group-btn">
+                            <input type="text" class="form-control" placeholder="Pesquisar..."> <span class="input-group-btn">
             <button class="btn btn-default" type="button"> <i class="fa fa-search"></i> </button>
             </span> </div>
                         <!-- /input-group -->
                     </li>
                     <li class="user-pro">
-                        <a href="#" class="waves-effect"><img src="../plugins/images/user.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Account<span class="fa arrow"></span></span>
+                        <a href="#" class="waves-effect"><img src="../plugins/images/user.jpg" alt="user-img" class="img-circle"> <span class="hide-menu"> Conta<span class="fa arrow"></span></span>
                         </a>
                         <ul class="nav nav-second-level">
-                            <li><a href="settings.php"><i class="ti-settings"></i> Account Setting</a></li>
-                            <li><a href="login.php"><i class="fa fa-power-off"></i> Logout</a></li>
+                            <li><a href="settings.php"><i class="ti-settings"></i> Configuração de Conta</a></li>
+                            <li><a href="login.php"><i class="fa fa-power-off"></i> Sair</a></li>
                         </ul>
                     </li>
-                    <li class="nav-small-cap m-t-10">--- Main Menu</li>
+                    <li class="nav-small-cap m-t-10">--- Menu Principal</li>
                     <li> <a href="index.php" class="waves-effect"><i class="linea-icon linea-basic fa-fw" data-icon="v"></i> <span class="hide-menu"> Dashboard </a>
                     </li>
                    
                     
-                   <li> <a href="#" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Blog<span class="fa arrow"></span></span></a>
+                   <li> <a href="#" class="waves-effect"><i data-icon="&#xe00b;" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Artigos<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="posts.php">All Posts</a></li>
-                            <li><a href="new-post.php">Create Post</a></li>
-                            <li><a href="comments.php" class="waves-effect">Comments</a>
+                            <li><a href="posts.php">Todos as Postagens</a></li>
+                            <li><a href="new-post.php">Criar Postagem</a></li>
+                            <li><a href="comments.php" class="waves-effect">Comentários</a>
                             </li>
                         </ul>
                     </li>
                    
-                   <li><a href="inbox.php" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Messages</span></a>
+                   <li><a href="inbox.php" class="waves-effect"><i data-icon=")" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Mensagens</span></a>
                     </li>
 
-                    <li><a href="subscribers.php" class="waves-effect"><i data-icon="n" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Subscribers</span></a>
+                    <li><a href="subscribers.php" class="waves-effect"><i data-icon="n" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Inscritos</span></a>
                     </li>
                     
-                     <li class="nav-small-cap">--- Other</li>
-                    <li> <a href="#" class="waves-effect active"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Access<span class="fa arrow"></span></span></a>
+                     <li class="nav-small-cap">--- Outros</li>
+                    <li> <a href="#" class="waves-effect active"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Acesso<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="users.php">Administrators</a></li>
-                            <li><a href="new-user.php">Create Admin</a></li>
+                            <li><a href="users.php">Administradores</a></li>
+                            <li><a href="new-user.php">Criar Administrador</a></li>
                             
                         </ul>
                     </li>
                     
-                    <li><a href="login.php" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Log out</span></a></li>
+                    <li><a href="login.php" class="waves-effect"><i class="icon-logout fa-fw"></i> <span class="hide-menu">Sair</span></a></li>
                    
                 </ul>
             </div>
@@ -153,8 +153,8 @@
                     <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12"> 
                         <ol class="breadcrumb">
                             <li><a href="#">Dashboard</a></li>
-                            <li><a href="#">Administrators</a></li>
-                            <li class="active"> <a href="new-user.php" class="btn btn-success btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Create New Admin</a></li>
+                            <li><a href="#">Administradores</a></li>
+                            <li class="active"> <a href="new-user.php" class="btn btn-success btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Criar Novo Administradores</a></li>
                         </ol>
                     </div>
                     <!-- /.col-lg-12 -->
@@ -171,7 +171,7 @@
 										echo 
 										'<div class="alert alert-success" >
 					                          <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
-					                         <strong>DONE!! </strong><p> The new Company Administrator has been added. They can now log in to their account with their credentials.</p>
+					                         <strong>DONE!! </strong><p> O novo Administrador foi adicionado. Eles agora pode fazer login em sua conta com suas credenciais.</p>
 					                    </div>'
 										;
 									}
@@ -179,7 +179,7 @@
                                         echo 
                                         '<div class="alert alert-warning" >
                                               <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
-                                             <strong>DELETED!! </strong><p> The Administrator has been successfully removed.</p>
+                                             <strong>DELETED!! </strong><p> O Administrador foi removido com sucesso.</p>
                                         </div>'
                                         ;
                                     }
@@ -187,21 +187,21 @@
                                         echo 
                                         '<div class="alert alert-danger" >
                                               <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
-                                             <strong>ERROR!! </strong><p> There was an error during deleting this record. Please try again.</p>
+                                             <strong>ERROR!! </strong><p> Ocorreu um erro ao tentar remover os registros. Tente novamente.</p>
                                         </div>'
                                         ;
                                     }
 								?>	
 
-                            <h3 class="box-title m-b-0">Company Administrators ( <x style="color: orange;"><?php echo mysqli_num_rows($query);?></x> )</h3>
-                            <p class="text-muted m-b-30">Export data to Copy, CSV, Excel, PDF & Print</p>
+                            <h3 class="box-title m-b-0">LabÁgua Administradores ( <x style="color: orange;"><?php echo mysqli_num_rows($query);?></x> )</h3>
+                            <p class="text-muted m-b-30">Exporte os dados para Copia, CSV, Excel, PDF & Impressão</p>
                             <div class="table-responsive">
                                 <table id="example23" class="display nowrap" cellspacing="0" width="100%">
 
                                     <?php 
 
                                     if (mysqli_num_rows($query)==0) {
-                                                    echo "<i style='color:brown;'>No Administrators Here :( </i> ";
+                                                    echo "<i style='color:brown;'>Sem administradores aqui :( </i> ";
                                                 }
                                                 else{
 
@@ -209,15 +209,15 @@
                                                     <thead>
                                                     <tr>
                                                         <th>email</th>
-                                                        <th>date</th>
-                                                        <th>action</th>
+                                                        <th>data</th>
+                                                        <th>ação</th>
                                                     </tr>
                                                 </thead>
                                                 <tfoot>
                                                     <tr>
                                                         <th>email</th>
-                                                        <th>date</th>
-                                                         <th>action</th>
+                                                        <th>data</th>
+                                                         <th>ação</th>
                                                     </tr>
                                                 </tfoot>
                                                 <tbody>
@@ -242,12 +242,12 @@
                                                     <div class="modal-content">
                                                         <div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                                            <h4 class="modal-title">Are you sure you want to delete this admin?</h4></div>
+                                                            <h4 class="modal-title">Você tem certeza que quer deletar um administrador?</h4></div>
                                                         <div class="modal-footer">
                                                         <form action="functions/del_admin.php" method="post">
                                                         <input type="hidden" name="id" value="'.$row["id"].'"/>
-                                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Close</button>
-                                                            <button type="submit" class="btn btn-danger waves-effect waves-light">Delete</button>
+                                                            <button type="button" class="btn btn-default waves-effect" data-dismiss="modal">Fechar</button>
+                                                            <button type="submit" class="btn btn-danger waves-effect waves-light">Deletar</button>
                                                             </form>
                                                         </div>
                                                     </div>
@@ -276,38 +276,38 @@
                 <!-- .right-sidebar -->
                 <div class="right-sidebar">
                     <div class="slimscrollright">
-                        <div class="rpanel-title"> Service Panel <span><i class="ti-close right-side-toggle"></i></span> </div>
+                        <div class="rpanel-title"> Painel de Controle <span><i class="ti-close right-side-toggle"></i></span> </div>
                         <div class="r-panel-body">
                             <ul>
-                                <li><b>Layout Options</b></li>
+                                <li><b>Personalização</b></li>
                                 <li>
                                     <div class="checkbox checkbox-info">
                                         <input id="checkbox1" type="checkbox" class="fxhdr">
-                                        <label for="checkbox1"> Fix Header </label>
+                                        <label for="checkbox1"> Fixar Cabeçalho </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="checkbox checkbox-warning">
                                         <input id="checkbox2" type="checkbox" checked="" class="fxsdr">
-                                        <label for="checkbox2"> Fix Sidebar </label>
+                                        <label for="checkbox2"> Fixar Barra Lateral </label>
                                     </div>
                                 </li>
                                 <li>
                                     <div class="checkbox checkbox-success">
                                         <input id="checkbox4" type="checkbox" class="open-close">
-                                        <label for="checkbox4"> Toggle Sidebar </label>
+                                        <label for="checkbox4"> Alternar Barra Lateral </label>
                                     </div>
                                 </li>
                             </ul>
                             <ul id="themecolors" class="m-t-20">
-                                <li><b>With Light sidebar</b></li>
+                                <li><b>Com Barra Lateral Claro</b></li>
                                 <li><a href="javascript:void(0)" theme="default" class="default-theme">1</a></li>
                                 <li><a href="javascript:void(0)" theme="green" class="green-theme">2</a></li>
                                 <li><a href="javascript:void(0)" theme="gray" class="yellow-theme">3</a></li>
                                 <li><a href="javascript:void(0)" theme="blue" class="blue-theme working">4</a></li>
                                 <li><a href="javascript:void(0)" theme="purple" class="purple-theme">5</a></li>
                                 <li><a href="javascript:void(0)" theme="megna" class="megna-theme">6</a></li>
-                                <li><b>With Dark sidebar</b></li>
+                                <li><b>Com Barra Lateral Escuro</b></li>
                                 <br/>
                                 <li><a href="javascript:void(0)" theme="default-dark" class="default-dark-theme">7</a></li>
                                 <li><a href="javascript:void(0)" theme="green-dark" class="green-dark-theme">8</a></li>
@@ -323,7 +323,7 @@
                 <!-- /.right-sidebar -->
             </div>
             <!-- /.container-fluid -->
-            <footer class="footer text-center"> 2018 &copy; Company Admin</footer>
+            <footer class="footer text-center"> 2025 &copy; LabÁgua</footer>
         </div>
         <!-- /#page-wrapper -->
     </div>
