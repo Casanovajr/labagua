@@ -26,14 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Check if email is empty
     if (empty(trim($_POST["email"]))) {
-        $email_err = 'Please enter an email address.';
+        $email_err = 'Por favor, insira um endereço de e-mail.';
     } else {
         $email = trim($_POST["email"]);
     }
 
     // Check if password is empty
     if (empty(trim($_POST['password']))) {
-        $password_err = 'Please enter your password.';
+        $password_err = 'Por favor, digite sua senha.';
     } else {
         $password = trim($_POST['password']);
     }
@@ -66,15 +66,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             exit(); // Ensure no further code is executed after redirection
                         } else {
                             // Display an error message if password is not valid
-                            $password_err = 'The password you entered was not valid. Please try again.';
+                            $password_err = 'A senha que você digitou não é válida. Por favor, tente novamente.';
                         }
                     }
                 } else {
                     // Display an error message if email doesn't exist
-                    $email_err = 'No account found with that email. Please recheck and try again.';
+                    $email_err = 'Nenhuma conta encontrada com esse e-mail. Verifique novamente e tente novamente.';
                 }
             } else {
-                echo "Oops! Something went wrong. Please try again later.";
+                echo "Oops! Algo deu errado. Tente novamente mais tarde.";
             }
         }
 
@@ -97,7 +97,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" type="image/png" sizes="16x16" href="../plugins/images/icon.png">
-    <title>Company Admin</title>
+    <title>Área Administrativa</title>
     <!-- Bootstrap Core CSS -->
     <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="../plugins/bower_components/bootstrap-extension/css/bootstrap-extension.css" rel="stylesheet">
@@ -124,7 +124,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <div class="login-box">
             <div class="white-box">
                 <form class="form-horizontal form-material" id="loginform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                    <h3 class="box-title m-b-20">Sign In</h3>
+                    <h3 class="box-title m-b-20">Entrar</h3>
                     <p style="color:red;"><?php echo $email_err; ?></p>
                     <p style="color:red;"><?php echo $password_err; ?></p>
                     <div class="form-group ">
@@ -134,12 +134,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                     <div class="form-group">
                         <div class="col-xs-12">
-                            <input class="form-control" type="password" name="password" required="" placeholder="Password">
+                            <input class="form-control" type="password" name="password" required="" placeholder="Senha">
                         </div>
                     </div>
                     <div class="form-group text-center m-t-20">
                         <div class="col-xs-12">
-                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" name="submit">Log In</button>
+                            <button class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" type="submit" name="submit">Entrar</button>
                         </div>
                     </div>
                 </form>

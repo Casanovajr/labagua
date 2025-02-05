@@ -321,7 +321,7 @@
                                                         echo '
                                                              <thead>
                                                             <tr>
-                                                                <th>TITULO</th>
+                                                                <th>TíTULO</th>
                                                                 <th>DATA</th>
                                                                 <th>COMENTÁRIOS</th>
                                                             </tr>
