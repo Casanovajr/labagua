@@ -34,8 +34,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="w3_agile_banner_top">
 				<div class="agile_phone_mail">
 					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i>+(254) 002 100 500</li>
-						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@Companyonline.net">info@example.com</a></li>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>+(55) 91 9 9918-3243 </li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@Companyonline.net"> contato@labagua.com</a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,19 +48,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<span class="icon-bar"></span>
 							<span class="icon-bar"></span>
 						</button>
-						<h1><a class="navbar-brand" href="index.php"><img src="images/logo.png" class="img-responsive"></a></h1>
+						<h1><a class="navbar-brand" href="index.php"><img src="images/LabAguaLogoPB2.png" class="img-responsive"></a></h1>
 					</div>
 					<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-13" id="cl-effect-13">
 						<ul class="nav navbar-nav">
 							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php">About</a></li>
-							<li><a href="portfolio.php">Products</a></li>
+							<li><a href="about.php">Sobre</a></li>
+							<li><a href="portfolio.php">Projetos</a></li>
 							<li><a href="blog.php">Blog</a></li>
-							<li class="active"><a href="contact.php">Contact</a></li>
+							<li class="active"><a href="contact.php">Solicitar uma análise</a></li>
 						</ul>
-						
+
 					</nav>
 
 					</div>
@@ -72,11 +72,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- mail -->
 	<div class="mail">
 		<div class="container">
-			<h2 class="w3l_head w3l_head1">Contact Us</h2>
+			<h2 class="w3l_head w3l_head1">Contate-nos</h2>
 
 			<?php
 				if (isset($_GET["sent"])) {
-					echo 
+					echo
 					'<div class="alert alert-success" >
                           <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
                          <strong>SENT!! </strong><p> Thank you for your message. We will get back to you as soon as possible.</p>
@@ -87,13 +87,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="agileits_mail_grids">
 				<div class="agileits_mail_grid_left">
 					<form action="functions/contact.php" method="post">
-						<h4>Your Names*</h4>
-						<input type="text" name="names" placeholder="Names..." required="">
-						<h4>Your Email*</h4>
+						<h4>Seu Nome*</h4>
+						<input type="text" name="names" placeholder="Nome..." required="">
+						<h4>Seu Email*</h4>
 						<input type="email" name="email" placeholder="Email..." required="">
-						<h4>Your Message*</h4>
-						<textarea placeholder="Message..." name="message"></textarea>
-						<input type="submit" name="submit" value="Send Message">
+						<h4>Sua Mensagem*</h4>
+						<textarea placeholder="Message..." name="messagem"></textarea>
+						<input type="submit" name="submit" value="Enviar">
 					</form>
 				</div>
 			</div>
@@ -102,7 +102,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //mail -->
 <!-- map -->
 	<div class="w3l-map">
-		<iframe width="100%" height="300" src="https://maps.google.com/maps?width=100%&amp;height=300&amp;hl=en&amp;q=Relaince%20center%20%2C%20Woodvale%20Grove%2C%20Westlands%20-%20Nairobi%2C%20Kenya+(Company%20Offices)&amp;ie=UTF8&amp;t=&amp;z=15&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.5154548684955!2d-48.447852825033955!3d-1.4642750985219526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x92a48c2a11fc7081%3A0xfc8f380776e8b79b!2sScience%20and%20Technology%20Park%20Guama!5e0!3m2!1sen!2sbr!4v1738861954928!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 <!-- map -->
 
