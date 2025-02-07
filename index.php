@@ -45,7 +45,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		.team-card img {
 			width: 150px;
 			height: 150px;
-			border-radius: 10%;
+			border-radius: 3%;
 			object-fit: cover;
 			margin-bottom: 15px;
 		}
@@ -192,7 +192,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<a href="http://lattes.cnpq.br/123456789" target="_blank" class="lattes-link">Currículo Lattes</a>
 				</div>
 				<div class="team-card item">
-					<img src="images/equipe/membro2.jpg" alt="Membro 2">
+					<img src="images/equipe/membro2.png" alt="Membro 2">
 					<h3>Caroline Nunes Carr</h3>
 					<a href="http://lattes.cnpq.br/987654321" target="_blank" class="lattes-link">Currículo Lattes</a>
 				</div>
