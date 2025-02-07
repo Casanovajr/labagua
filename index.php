@@ -66,6 +66,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		/* ... existing code ... */
 	</style>
+
 	<!-- //custom-theme -->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -81,8 +82,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 	<!-- font-awesome-icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
-	<link href="css/style.css" rel="stylesheet">
-
 	<!-- //font-awesome-icons -->
 	<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -164,7 +163,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<!-- flexSlider -->
 				<script defer src="js/jquery.flexslider.js"></script>
 				<script type="text/javascript">
-					$(window).load(function() {
+					$(window).on('load', function() {
 						$('.flexslider').flexslider({
 							animation: "slide",
 							start: function(slider) {
@@ -178,8 +177,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //banner -->
-
-	<!-- content -->
 
 	<!-- Equipe -->
 	<div class="team-section">
@@ -208,7 +205,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 	<!-- //Equipe -->
 
-
+	<!-- content -->
 	<div class="process all_pad agileits">
 
 		<?php
@@ -231,32 +228,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //process -->
 
 
+
+
 	<!-- footer -->
 	<script>
-$(document).ready(function(){
-    $('.team-carousel').owlCarousel({
-        loop: true,
-        margin: 20,
-        nav: true,
-        responsiveClass: true,
-        responsive: {
-            0: {
-                items: 1,
-                nav: true
-            },
-            600: {
-                items: 2,
-                nav: true
-            },
-            1000: {
-                items: 3,
-                nav: true,
-                loop: true
-            }
-        }
-    });
-});
+		$(document).ready(function() {
+			$('.team-carousel').owlCarousel({
+				loop: true,
+				margin: 20,
+				nav: true,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 2,
+						nav: true
+					},
+					1000: {
+						items: 3,
+						nav: true,
+						loop: true
+					}
+				}
+			});
+		});
 	</script>
+
 	<?php
 	include("footer.php");
 	?>
