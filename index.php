@@ -18,15 +18,70 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			window.scrollTo(0, 1);
 		}
 	</script>
+
+	<style>
+		/* ... existing code ... */
+
+		/* Estilos para a seção da equipe */
+		.team-section {
+			padding: 50px 0;
+			background: #f8f9fa;
+		}
+
+		.team-carousel {
+			margin: 0 auto;
+			max-width: 1200px;
+		}
+
+		.team-card {
+			text-align: center;
+			padding: 20px;
+			background: #fff;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+			margin: 0 15px;
+		}
+
+		.team-card img {
+			width: 150px;
+			height: 150px;
+			border-radius: 10%;
+			object-fit: cover;
+			margin-bottom: 15px;
+		}
+
+		.team-card h3 {
+			margin: 10px 0;
+			font-size: 1.2em;
+		}
+
+		.lattes-link {
+			color: #007bff;
+			text-decoration: none;
+		}
+
+		.lattes-link:hover {
+			text-decoration: underline;
+		}
+
+		/* ... existing code ... */
+	</style>
 	<!-- //custom-theme -->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<!-- js -->
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- //js -->
+	<!-- Owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 	<!-- //js -->
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 	<!-- font-awesome-icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+
 	<!-- //font-awesome-icons -->
 	<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -124,6 +179,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //banner -->
 
 	<!-- content -->
+
+	<!-- Equipe -->
+	<div class="team-section">
+		<div class="container">
+			<h2 class="w3layouts_head">Nossa Equipe</h2>
+			<br>
+			<div class="team-carousel owl-carousel owl-theme">
+				<div class="team-card item">
+					<img src="images/equipe/membro1.jpg" alt="Membro 1">
+					<h3>Hebe Morgane</h3>
+					<a href="http://lattes.cnpq.br/123456789" target="_blank" class="lattes-link">Currículo Lattes</a>
+				</div>
+				<div class="team-card item">
+					<img src="images/equipe/membro2.jpg" alt="Membro 2">
+					<h3>Caroline Nunes Carr</h3>
+					<a href="http://lattes.cnpq.br/987654321" target="_blank" class="lattes-link">Currículo Lattes</a>
+				</div>
+				<div class="team-card item">
+					<img src="images/equipe/membro3.jpg" alt="Membro 3">
+					<h3>Ivan</h3>
+					<a href="http://lattes.cnpq.br/987654321" target="_blank" class="lattes-link">Currículo Lattes</a>
+				</div>
+				<!-- Adicione mais membros conforme necessário -->
+			</div>
+		</div>
+	</div>
+	<!-- //Equipe -->
+
+
 	<div class="process all_pad agileits">
 
 		<?php
@@ -146,9 +230,32 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //process -->
 
 
-
 	<!-- footer -->
-
+	<script>
+		$(document).ready(function() {
+			$('.team-carousel').owlCarousel({
+				loop: true,
+				margin: 20,
+				nav: true,
+				responsiveClass: true,
+				responsive: {
+					0: {
+						items: 1,
+						nav: true
+					},
+					600: {
+						items: 2,
+						nav: true
+					},
+					1000: {
+						items: 3,
+						nav: true,
+						loop: true
+					}
+				}
+			});
+		});
+	</script>
 	<?php
 	include("footer.php");
 	?>
