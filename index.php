@@ -69,14 +69,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //custom-theme -->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-	<!-- js -->
+	<!-- jQuery -->
 	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-	<!-- //js -->
+	<!-- FlexSlider -->
+	<script defer src="js/jquery.flexslider.js"></script>
 	<!-- Owl Carousel -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<!-- //js -->
+
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 	<!-- font-awesome-icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
@@ -232,29 +233,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 	<!-- footer -->
 	<script>
-		$(document).ready(function() {
-			$('.team-carousel').owlCarousel({
-				loop: true,
-				margin: 20,
-				nav: true,
-				responsiveClass: true,
-				responsive: {
-					0: {
-						items: 1,
-						nav: true
-					},
-					600: {
-						items: 2,
-						nav: true
-					},
-					1000: {
-						items: 3,
-						nav: true,
-						loop: true
-					}
-				}
-			});
-		});
+$(document).ready(function(){
+    $('.team-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        nav: true,
+        responsiveClass: true,
+        responsive: {
+            0: {
+                items: 1,
+                nav: true
+            },
+            600: {
+                items: 2,
+                nav: true
+            },
+            1000: {
+                items: 3,
+                nav: true,
+                loop: true
+            }
+        }
+    });
+});
 	</script>
 	<?php
 	include("footer.php");
