@@ -35,19 +35,37 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		.team-card {
 			text-align: center;
+			/* Centraliza o conteúdo horizontalmente */
 			padding: 20px;
 			background: #fff;
 			border-radius: 10px;
 			box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 			margin: 0 15px;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			/* Centraliza o conteúdo verticalmente */
 		}
 
 		.team-card img {
-			width: 150px;
-			height: 150px;
-			border-radius: 3%;
-			object-fit: cover;
-			margin-bottom: 15px;
+			width: 175px !important;
+			height: 210px !important;
+			object-fit: cover !important;
+			border-radius: 3% !important;
+			margin-bottom: 15px !important;
+			aspect-ratio: 1/1 !important;
+			display: block;
+			/* Garante que a imagem se comporte como um bloco */
+			margin-left: auto;
+			margin-right: auto;
+			/* Centraliza a imagem horizontalmente */
+		}
+
+		/* Adicionando um hover effect para melhorar a interatividade */
+		.team-card:hover {
+			transform: translateY(-5px);
+			transition: transform 0.3s ease;
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 		}
 
 		.team-card h3 {
@@ -56,15 +74,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 
 		.lattes-link {
-			color: #007bff;
+			color: #007bff !important;
 			text-decoration: none;
 		}
 
 		.lattes-link:hover {
 			text-decoration: underline;
 		}
-
-		/* ... existing code ... */
 	</style>
 
 	<!-- //custom-theme -->
@@ -78,16 +94,46 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
 	<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
 	<!-- font-awesome-icons -->
 	<link href="css/font-awesome.css" rel="stylesheet">
 	<!-- //font-awesome-icons -->
 	<link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- CSS da Barra de Acessibilidade -->
+	<link href="css/acessibilidade.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- JavaScript da Barra de Acessibilidade -->
+	<script src="js/acessibilidade.js"></script>
 </head>
 
 <body>
+
+	<!-- Barra de Acessibilidade -->
+	<div class="accessibility-bar">
+		<button class="accessibility-toggle" onclick="toggleAccessibilityBar()">
+			<i class="fa fa-universal-access"></i>
+		</button>
+		<div class="accessibility-tools">
+			<button onclick="increaseFontSize()" title="Aumentar fonte">
+				<i class="fa fa-font"></i> A+
+			</button>
+
+			<button onclick="toggleContrast()" title="Alto contraste">
+				<i class="fa fa-adjust"></i>
+			</button>
+
+			<button onclick="speakPageContent()" title="Ler página">
+				<i class="fa fa-volume-up"></i>
+			</button>
+			<button onclick="stopSpeaking()" title="Parar leitura">
+				<i class="fa fa-stop"></i>
+			</button>
+		</div>
+	</div>
+
+	<!-- /Barra de Acessibilidade -->
+
+
 	<!-- banner -->
 	<div class="banner">
 		<div class="container">
@@ -95,7 +141,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="agile_phone_mail">
 					<ul>
 						<li><i class="fa fa-phone" aria-hidden="true"></i>+(55) 91 9 9918-3243 </li>
-						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@Companyonline.net"> contato@labagua.com</a></li>
+						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contato@labagua.com"> contato@labagua.com</a></li>
 					</ul>
 				</div>
 			</div>
@@ -187,7 +233,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="team-card item">
 					<img src="images/equipe/membro1.jpg" alt="Membro 1">
 					<h3>Hebe Morgane</h3>
-					<a href="http://lattes.cnpq.br/123456789" target="_blank" class="lattes-link">Currículo Lattes</a>
+					<a href="http://lattes.cnpq.br/123456789" style="color: #007bff" target="_blank" class="lattes-link">Currículo Lattes</a>
 				</div>
 				<div class="team-card item">
 					<img src="images/equipe/membro2.png" alt="Membro 2">
