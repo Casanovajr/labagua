@@ -38,16 +38,48 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+
+	<!-- CSS da Barra de Acessibilidade -->
+	<link href="css/acessibilidade.css" rel="stylesheet" type="text/css" media="all" />
+	<!-- JavaScript da Barra de Acessibilidade -->
+	<script src="js/acessibilidade.js"></script>
+
 </head>
 <body>
+
+	<!-- Barra de Acessibilidade -->
+	<div class="accessibility-bar">
+		<button class="accessibility-toggle" onclick="toggleAccessibilityBar()">
+			<i class="fa fa-universal-access"></i>
+		</button>
+		<div class="accessibility-tools">
+			<button onclick="increaseFontSize()" title="Aumentar fonte">
+				<i class="fa fa-font"></i> A+
+			</button>
+
+			<button onclick="toggleContrast()" title="Alto contraste">
+				<i class="fa fa-adjust"></i>
+			</button>
+
+			<button onclick="speakPageContent()" title="Ler página">
+				<i class="fa fa-volume-up"></i>
+			</button>
+			<button onclick="stopSpeaking()" title="Parar leitura">
+				<i class="fa fa-stop"></i>
+			</button>
+		</div>
+	</div>
+
+	<!-- /Barra de Acessibilidade -->
+
 <!-- banner -->
 	<div class="banner1">
 		<div class="container">
 			<div class="w3_agile_banner_top">
 				<div class="agile_phone_mail">
 					<ul>
-						<li><i class="fa fa-phone" aria-hidden="true"></i>+(254) 002 100 500</li>
-						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@Companyonline.net">info@example.com</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>+(55) 91 9 9918-3243 </li>
+						<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:contato@labagua.com"> contato@labagua.com</a></li>
 					</ul>
 				</div>
 			</div>
@@ -66,13 +98,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-13" id="cl-effect-13">
 						<ul class="nav navbar-nav">
-							<li><a href="index.php">Home</a></li>
-							<li><a href="about.php">About</a></li>
-							<li><a href="portfolio.php">Products</a></li>
-							<li class="active"><a href="blog.php">Blog</a></li>
-							<li><a href="contact.php">Contact</a></li>
+							<li><a href="index.php">Início</a></li>
+							<li><a href="https://aguasdamazonia.com/plataforma/iqa.html">IQA</a></li>
+							<li><a href="portfolio.php">Produções</a></li>
+							<li class="active"><a href="blog.php">Projetos</a></li>
+							<li><a href="contact.php">Solicitar uma análise</a></li>
 						</ul>
 						
+							
 					</nav>
 
 					</div>
@@ -84,14 +117,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- gallery -->
 	<div class="gallery">
 		<div class="container">
-			<h2 class="w3l_head w3l_head1">Blog</h2>
+			<h2 class="w3l_head w3l_head1">Projetos</h2>
 			<div class="wthree_gallery_grids">
 				
 				<div class="row">
 
 						<?php 
                             if (mysqli_num_rows($query)==0) {
-                              echo "<b style='color:brown;'>Sorry there are no posts Yet :( We will be uploading new content soon! </b> ";
+                              echo "<b style='color:brown;'>Desculpe, ainda não há postagens :( Em breve postaremos novos conteúdos! </b> ";
                               }
                             
                           

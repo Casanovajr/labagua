@@ -160,7 +160,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-13" id="cl-effect-13">
 							<ul class="nav navbar-nav">
-								<li class="active"><a href="index.php">Inicio</a></li>
+								<li class="active"><a href="index.php">Início</a></li>
 								<li><a href="https://aguasdamazonia.com/plataforma/iqa.html">IQA</a></li>
 								<li><a href="portfolio.php">Produções</a></li>
 								<li><a href="blog.php">Projetos</a></li>
@@ -259,13 +259,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			echo
 			'<div class="alert alert-success" >
                           <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
-                         <strong>SUBSCRIBED!! </strong><p> Thank you for subscribing with us. We will keep you informed on what is happening with Company.</p>
+                         <strong>Inscrito!! </strong><p> Obrigado pela inscrição. Manteremos você informado sobre o que está acontecendo.</p>
                     </div>';
 		} elseif (isset($_GET["fail"])) {
 			echo
 			'<div class="alert alert-danger" >
                           <a href="#" class="close" data-dismiss="alert" aria-label="close"></a>
-                         <strong>Ooops!! </strong><p> Looks like you are already subscribed to our mailing list :) </p>
+                         <strong>Ooops!! </strong><p> Parece que você já está inscrito em nossa lista de e-mail :) </p>
                     </div>';
 		}
 		?>
