@@ -91,7 +91,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-13" id="cl-effect-13">
 							<ul class="nav navbar-nav">
-								<li><a href="index.php">Inicio</a></li>
+								<li><a href="index.php">Início</a></li>
 								<li><a href="https://aguasdamazonia.com/plataforma/iqa.html">IQA</a></li>
 								<li class="active"><a href="portfolio.php">Produções</a></li>
 								<li><a href="blog.php">Projetos</a></li>

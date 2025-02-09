@@ -16,14 +16,13 @@
 					<li><a href="#" class="icon icon-border facebook"></a></li>
 					<li><a href="#" class="icon icon-border twitter"></a></li>
 					<li><a href="https://www.instagram.com/labagua?igsh=ZmZ2Nzh1d21sajdn" class="icon icon-border instagram"></a></li>
-					<li><a href="#" class="icon icon-border pinterest"></a></li>
 				</ul>
 		</div>
 		<div class="col-md-4 footer-left-w3-agileits">
-			<h3>Newsletter</h3>
-			<p>Subscribe to our newsletter and be the first to know what we are upto.</p>
+			<h3>LabÁgua Notícias</h3>
+			<p>Assine e seja o primeiro a saber o que estamos fazendo.</p>
 				<form action="functions/subscribe.php" method="post">
-					<input type="email" name="email" placeholder="Your email..." required="">
+					<input type="email" name="email" placeholder="Seu email..." required="">
 					<input type="submit" value=" " name="submit">
 				</form>
 		</div>
