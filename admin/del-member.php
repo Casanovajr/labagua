@@ -269,9 +269,7 @@ $result = $connection->query($sql);
                     </tr>';
                   }
                   ?>
-                  }
-
-                  ?>
+              
                   </tbody>
                 </table>
               </div>
