@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 }
 
-$sql = "SELECT * FROM membros WHERE status = 'pendente'";
+$sql = "SELECT * FROM membros WHERE status = 'aprovado'";
 $result = $connection->query($sql);
 
 
@@ -188,7 +188,7 @@ $result = $connection->query($sql);
             <ol class="breadcrumb">
               <li><a href="#">Dashboard</a></li>
               <li><a href="#">Administradores</a></li>
-              <li class="active"> <a href="member.php" class="btn btn-success btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Aceitar Novo Membro</a></li>
+              <li class="active"> <a href="del-member.php" class="btn btn-success btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Apagar Membro</a></li>
             </ol>
           </div>
           <!-- /.col-lg-12 -->
@@ -262,13 +262,8 @@ $result = $connection->query($sql);
                       <td>
                         <form method="post" style="display:inline;">
                           <input type="hidden" name="id" value="' . $row['id'] . '">
-                          <input type="hidden" name="status" value="aprovado">
-                          <button type="submit" class="btn btn-success btn-sm"><i class="fa fa-check"></i> Aprovar</button>
-                        </form>
-                        <form method="post" style="display:inline;">
-                          <input type="hidden" name="id" value="' . $row['id'] . '">
                           <input type="hidden" name="status" value="recusado">
-                          <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Recusar</button>
+                          <button type="submit" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i> Apagar</button>
                         </form>
                       </td>
                     </tr>';

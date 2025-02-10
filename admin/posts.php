@@ -130,8 +130,10 @@
                      <li class="nav-small-cap">--- Outros</li>
                     <li> <a href="#" class="waves-effect"><i data-icon="H" class="linea-icon linea-basic fa-fw"></i> <span class="hide-menu">Acesso<span class="fa arrow"></span></span></a>
                         <ul class="nav nav-second-level">
-                            <li><a href="users.php">Administradores</a></li>
-                            <li><a href="new-user.php">Criar Administrador</a></li>
+                        <li><a href="users.php">Administradores</a></li>
+              <li><a href="new-user.php">Criar Administrador</a></li>
+              <li><a href="member.php">Aceitar Membro</a></li>
+              <li><a href="del-member.php">Apagar Membro</a></li>
                             
                         </ul>
                     </li>
