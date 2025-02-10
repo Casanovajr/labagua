@@ -32,7 +32,7 @@
 	<div class="copyright-w3-agile">
 		<div class="container">
 			<p><a href="">UEPA</a> |<a href="">CNPQ</a> |<a href="#" >Governo do Pará</a> | <a href="#" >MCTI</a> | <a href="#" >PCT</a> | <a href="#" >Ministério da Saude</a></p>
-            <p>© 2025 company | All rights reserved</p>
+            <p>© 2025 LabÁgua | All rights reserved</p>
 			<div class="clearfix"> </div>
 		</div>
 	</div>
