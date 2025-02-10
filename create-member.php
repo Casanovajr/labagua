@@ -235,7 +235,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="agileits_mail_grid_left">
           <form action="create-member.php" method="post" enctype="multipart/form-data">
             <h4>Seu Nome*</h4>
-            <input type="text" name="nome" placeholder="Nome..." required="">
+            <input type="text" maxlength="24" name="nome" placeholder="Ex: Antonio José (Até 24 caracteres)" required="">
             <h4>Seu Cargo*</h4>
             <input type="text" name="cargo" placeholder="Ex: bolsista..." required="">
             <h4>Sua Curriculo Lattes(Link)*</h4>
