@@ -54,10 +54,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			border-radius: 3% !important;
 			margin-bottom: 15px !important;
 			aspect-ratio: 1/1 !important;
-			display: block;
+			display: block !important;
 			/* Garante que a imagem se comporte como um bloco */
-			margin-left: auto;
-			margin-right: auto;
+			margin-left: auto !important;
+			margin-right: auto !important;
 			/* Centraliza a imagem horizontalmente */
 		}
 
@@ -69,8 +69,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		}
 
 		.team-card h3 {
-			margin: 10px 0;
 			font-size: 1.2em;
+			/* Tamanho fixo para o nome */
+			white-space: normal;
+			/* Permite que o texto quebre em várias linhas */
+			overflow: visible;
+			/* Mostra todo o texto */
+			text-overflow: clip;
+			/* Remove o "..." */
+			max-width: 100%;
+			/* Usa toda a largura disponível */
+			margin: 0 auto;
+			/* Centraliza o nome */
+			padding: 5px 0;
+			/* Espaçamento vertical */
+			word-wrap: break-word;
+			/* Quebra palavras longas */
+
 		}
 
 		.lattes-link {
