@@ -225,31 +225,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- //banner -->
 
 	<!-- Equipe -->
+
+	<?php
+	session_start();
+	require 'admin/functions/db.php';
+
+	$sql = "SELECT * FROM membros WHERE status = 'aprovado'";
+	$result = $connection->query($sql);
+	?>
+
+
+
 	<div class="team-section">
 		<div class="container">
 			<h2 class="w3layouts_head">Nossa Equipe</h2>
 			<br>
 			<div class="team-carousel owl-carousel owl-theme">
-				<div class="team-card item">
-					<img src="images/equipe/membro1.jpg" alt="Membro 1">
-					<h3>Hebe Morgane</h3>
-					<a href="http://lattes.cnpq.br/123456789" style="color: #007bff" target="_blank" class="lattes-link">Currículo Lattes</a>
-				</div>
-				<div class="team-card item">
-					<img src="images/equipe/membro2.png" alt="Membro 2">
-					<h3>Caroline Nunes Carr</h3>
-					<a href="http://lattes.cnpq.br/987654321" target="_blank" class="lattes-link">Currículo Lattes</a>
-				</div>
-				<div class="team-card item">
-					<img src="images/equipe/membro3.jpg" alt="Membro 3">
-					<h3>Ivan</h3>
-					<a href="http://lattes.cnpq.br/987654321" target="_blank" class="lattes-link">Currículo Lattes</a>
-				</div>
+				<?php while ($row = $result->fetch_assoc()): ?>
+					<div class="team-card item">
+						<img src="data:image/jpeg;base64,<?= base64_encode($row['foto']); ?>" alt="<?= $row['nome']; ?>">
+						<h3><?= $row['nome']; ?></h3>
+						<p class="text-xl font-bold text-blue-500"><?= $row['cargo']; ?></p>
+						<a href="<?= $row['lattes']; ?>" style="color: #007bff" target="_blank" class="lattes-link">Currículo Lattes</a>
+					</div>
+				<?php endwhile; ?>
+
 				<!-- Adicione mais membros conforme necessário -->
 			</div>
 		</div>
 	</div>
+
+
 	<!-- //Equipe -->
+
+
 
 	<!-- content -->
 	<div class="process all_pad agileits">
