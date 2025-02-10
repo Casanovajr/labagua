@@ -254,6 +254,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="team-section">
 		<div class="container">
 			<h2 class="w3layouts_head">Nossa Equipe</h2>
+			<a href="/create-member.php"><i class="fa fa-pencil-square-o" aria-hidden="true"> Participar da equipe</i></a>
+			<br>
 			<br>
 			<div class="team-carousel owl-carousel owl-theme">
 				<?php while ($row = $result->fetch_assoc()): ?>
@@ -265,10 +267,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					</div>
 				<?php endwhile; ?>
 
+
 				<!-- Adicione mais membros conforme necessário -->
 			</div>
 		</div>
+
 	</div>
+
 
 
 	<!-- //Equipe -->
