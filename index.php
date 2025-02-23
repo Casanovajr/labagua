@@ -180,6 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="portfolio.php">Produções</a></li>
 								<li><a href="blog.php">Projetos</a></li>
 								<li><a href="contact.php">Solicitar uma análise</a></li>
+                                <li><a href="https://aguasdamazonia.com/plataforma/IET/index.html">ITE</a></li>
 							</ul>
 
 						</nav>
