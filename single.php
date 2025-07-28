@@ -16,7 +16,7 @@ author URL: http://ethredah.github.io
 
         $sql2 = "SELECT * FROM comments WHERE blogid=$postid";
         $query2 = mysqli_query($connection, $sql2);
-        
+
       }
 
       else {
@@ -33,7 +33,7 @@ author URL: http://ethredah.github.io
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Coalition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Coalition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -44,7 +44,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- font-awesome-icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -79,7 +79,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	</div>
 
 	<!-- /Barra de Acessibilidade -->
-	 
+
 <!-- banner -->
 	<div class="banner1">
 		<div class="container">
@@ -107,7 +107,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<nav class="cl-effect-13" id="cl-effect-13">
 						<ul class="nav navbar-nav">
 							<li><a href="index.php">Início</a></li>
-							<li><a href="https://aguasdamazonia.com/plataforma/iqa.html">IQA</a></li>
+              <li><a href="calculadora.php">Calculadoras</a></li>
 							<li><a href="portfolio.php">Produções</a></li>
 							<li class="active"><a href="blog.php">Projetos</a></li>
 							<li><a href="contact.php">Solicitar uma análise</a></li>
@@ -126,13 +126,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h2 class="w3l_head w3l_head1">Projeto Postado</h2>
 			<div class="wthree_gallery_grids">
-				
+
 				<div class="row">
 
-					<?php 
+					<?php
 
                           while ($row = mysqli_fetch_assoc($query)) {
-                          	
+
 					echo
 					'<div class="col-md-12">
 						<a href="blog.php"><i class="fa fa-arrow-left"> Voltar</i></a>
@@ -156,11 +156,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div style="border-style: double; border-color: #000;">
 							<div style="padding: 10px;">
 
-						<?php 
+						<?php
 						while ($row2 = mysqli_fetch_assoc($query2)) {
 						echo
 						'
-							 
+
 							<b>'.$row2["name"].' :</b>
 							<p>
 								'.$row2["comment"].'
@@ -189,10 +189,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<input type="submit" value="Comentar" name="submit">
 						</form>
 						</div>
-						
+
 
 					</div>
-				
+
 
 				</div>
 
@@ -200,14 +200,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- <h5>Comments</h5> -->
 
 				</div>
-                
+
 			</div>
 			<script src="js/jzBox.js"></script>
 		</div>
 	</div>
 <!-- //gallery -->
 <!-- footer -->
-	
-	<?php 
+
+	<?php
 		include("footer.php");
 	?>

@@ -23,7 +23,7 @@ author URL: http://ethredah.github.io
 <!-- custom-theme -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Coalition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Coalition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -34,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- font-awesome-icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
+<link href="css/font-awesome.css" rel="stylesheet">
 <!-- //font-awesome-icons -->
 <link href="//fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
@@ -99,13 +99,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<nav class="cl-effect-13" id="cl-effect-13">
 						<ul class="nav navbar-nav">
 							<li><a href="index.php">Início</a></li>
-							<li><a href="https://aguasdamazonia.com/plataforma/iqa.html">IQA</a></li>
+              <li><a href="calculadora.php">Calculadoras</a></li>
 							<li><a href="portfolio.php">Produções</a></li>
 							<li class="active"><a href="blog.php">Projetos</a></li>
 							<li><a href="contact.php">Solicitar uma análise</a></li>
 						</ul>
-						
-							
+
+
 					</nav>
 
 					</div>
@@ -119,20 +119,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="container">
 			<h2 class="w3l_head w3l_head1">Projetos</h2>
 			<div class="wthree_gallery_grids">
-				
+
 				<div class="row">
 
-						<?php 
+						<?php
                             if (mysqli_num_rows($query)==0) {
                               echo "<b style='color:brown;'>Desculpe, ainda não há postagens :( Em breve postaremos novos conteúdos! </b> ";
                               }
-                            
-                          
+
+
                           else
                           {
 
                           	while ($row=mysqli_fetch_array($query)) {
-                          	
+
                     echo
 					'<div class="col-md-4">
 						<a href="single.php?id='.$row["id"].'"><h4>'.$row["title"].'</h4></a>
@@ -147,7 +147,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								}
 							}
 						?>
-				
+
 
 				</div>
 
@@ -155,14 +155,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<!-- <h5>Comments</h5> -->
 
 				</div>
-                
+
 			</div>
 			<script src="js/jzBox.js"></script>
 		</div>
 	</div>
 <!-- //gallery -->
 <!-- footer -->
-	
-	<?php 
+
+	<?php
 		include("footer.php");
 	?>
