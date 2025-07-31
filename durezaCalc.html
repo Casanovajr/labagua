@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calculadora de Dureza da Água
+  </title>
+</head>
+<body>
+<style>
+  .card.calculadora {
+    background: linear-gradient(#fff, #e0f7fa);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .card.calculadora input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+
+  .card.calculadora button {
+    background-color: #0288d1;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .card.calculadora button:hover {
+    background-color: #0277bd;
+  }
+
+</style>
+
+
+<div class="card calculadora">
+  <h3>Calculadora de Dureza da Água</h3>
+  <p>Insira os valores de cálcio e magnésio em mg/L para calcular a dureza total da água.</p>
+
+  <label for="calcio">Cálcio (Ca²⁺) [mg/L]:</label>
+  <input type="number" id="calcio" step="any" required>
+
+  <label for="magnesio">Magnésio (Mg²⁺) [mg/L]:</label>
+  <input type="number" id="magnesio" step="any" required>
+
+  <button onclick="calcularDureza()">Calcular</button>
+
+  <div id="resultado" style="margin-top: 15px;"></div>
+</div>
+
+<script>
+  function calcularDureza() {
+    const calcio = parseFloat(document.getElementById("calcio").value.replace(",", "."));
+    const magnesio = parseFloat(document.getElementById("magnesio").value.replace(",", "."));
+
+    if (isNaN(calcio) || isNaN(magnesio)) {
+      document.getElementById("resultado").innerHTML = "<span style='color:red'>Por favor, insira valores válidos.</span>";
+      return;
+    }
+
+    const FATOR_CA = 2.497;
+    const FATOR_MG = 4.117;
+
+    const dureza = (calcio * FATOR_CA) + (magnesio * FATOR_MG);
+
+    let classificacao = "";
+    if (dureza <= 60) classificacao = "Muito Macia";
+    else if (dureza <= 120) classificacao = "Macia";
+    else if (dureza <= 180) classificacao = "Moderada/Dura";
+    else if (dureza <= 300) classificacao = "Dura";
+    else classificacao = "Muito Dura";
+
+    const grausAlemaes = dureza / 17.8;
+    const grausFranceses = dureza / 10.0;
+    const gpg = dureza / 17.1;
+
+    document.getElementById("resultado").innerHTML = `
+    <strong>Dureza Total:</strong> ${dureza.toFixed(2)} mg/L de CaCO₃<br>
+    <strong>Classificação:</strong> Água ${classificacao}<br><br>
+    <strong>Outras unidades:</strong><br>
+    - Graus Alemães (°dH): ${grausAlemaes.toFixed(2)}<br>
+    - Graus Franceses (°fH): ${grausFranceses.toFixed(2)}<br>
+    - Grain per Gallon (gpg): ${gpg.toFixed(2)}
+  `;
+  }
+</script>
+
+</body>
+</html>

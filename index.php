@@ -7,7 +7,7 @@
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="Coalition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+	<meta name="keywords" content="Coalition Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 	<script type="application/x-javascript">
 		addEventListener("load", function() {
@@ -176,7 +176,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<nav class="cl-effect-13" id="cl-effect-13">
 							<ul class="nav navbar-nav">
 								<li class="active"><a href="index.php">Início</a></li>
-								<li><a href="https://aguasdamazonia.com/plataforma/iqa.html">IQA</a></li>
+								<li><a href="calculadora.php">Calculadoras</a></li>
 								<li><a href="portfolio.php">Produções</a></li>
 								<li><a href="blog.php">Projetos</a></li>
 								<li><a href="contact.php">Solicitar uma análise</a></li>

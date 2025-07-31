@@ -1,56 +1,21 @@
-
-<?php 
-
+<?php
 require_once "db.php";
 
+$author = $_POST['author'] ?? 'Anônimo';
+$title = $_POST['title'] ?? '';
+$content = $_POST['content'] ?? '';
 
-  // session_start();
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $title && $content) {
+  $sql = "INSERT INTO posts (author, title, content) VALUES (?, ?, ?)";
+  $stmt = $db->prepare($sql);
 
-  // // If session variable is not set it will redirect to login page
-
-  // if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
-  //     header('Location:../login.php');
-  //   exit;
-
-  // }
-
-  // $email = $_SESSION['email'];
-  $author = $_POST['author'];
-  $title = $_POST['title'];
-  $content = $_POST['content'];
-
-  
-
-  if (isset($_POST["submit"])) {
-    // Add task to DB
-    $sql = "INSERT INTO posts(author, title, content)
-    VALUES (?,?,?)";
-
-    $stmt = $db->prepare($sql);
-
-
-    try {
-      $stmt->execute([$author, $title, $content]);
-      header('Location:../posts.php?posted');
-
-      }
-
-     catch (Exception $e) {
-        $e->getMessage();
-        echo "Error";
-    }
+  try {
+    $stmt->execute([$author, $title, $content]);
+    header('Location: ../posts.php?posted');
+    exit;
+  } catch (Exception $e) {
+    echo "Erro ao salvar: " . $e->getMessage();
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
+} else {
+  echo "Preencha todos os campos obrigatórios.";
+}
