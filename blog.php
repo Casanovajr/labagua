@@ -123,6 +123,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="row">
 
 						<?php
+
                             if (mysqli_num_rows($query)==0) {
                               echo "<b style='color:brown;'>Desculpe, ainda não há postagens :( Em breve postaremos novos conteúdos! </b> ";
                               }
@@ -135,7 +136,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                     echo
 					'<div class="col-md-4">
-						<a href="single.php?id='.$row["id"].'"><h4>'.$row["title"].'</h4></a>
+						<a href="single.php?id='.$row["id"].'">
+						<h4>'.substr($row["title"],0,50).'...</h4>
+						</a>
+
 						<br>
 						<p>
 							'.substr($row["content"], 0, 200).'...

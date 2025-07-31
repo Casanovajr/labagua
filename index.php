@@ -3,6 +3,7 @@
 
 <head>
 	<link rel="icon" href="images/agua.png">
+
 	<title>LabÁgua</title>
 	<!-- custom-theme -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -96,7 +97,71 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		.lattes-link:hover {
 			text-decoration: underline;
 		}
-	</style>
+    .postagens-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .titulo-postagens {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .postagens-grid {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .postagem-card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      padding: 15px;
+      width: 100%;
+      max-width: 350px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      border-radius: 8px;
+      transition: transform 0.2s;
+    }
+
+    .postagem-card:hover {
+      transform: scale(1.02);
+    }
+
+    .postagem-titulo {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .postagem-titulo:hover {
+      text-decoration: underline;
+    }
+
+    .postagem-conteudo {
+      margin: 10px 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .btn-leia-mais {
+      display: inline-block;
+      padding: 6px 12px;
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 0.875rem;
+    }
+
+    .btn-leia-mais:hover {
+      background-color: #0056b3;
+    }
+
+  </style>
 
 	<!-- //custom-theme -->
 	<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
@@ -238,8 +303,40 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 	<!-- //banner -->
+  <!-- Postagens -->
+  <div class="postagens-container">
+    <h1 class="titulo-postagens">Postagens Recentes</h1>
+    <div class="postagens-grid">
+      <?php
+      require_once "admin/functions/db.php";
 
-	<!-- Equipe -->
+      $sql = "SELECT * FROM posts ORDER BY id DESC LIMIT 3";
+      $result = mysqli_query($connection, $sql);
+
+      while ($row = mysqli_fetch_assoc($result)) {
+        ?>
+        <div class="postagem-card">
+          <h3>
+            <a href="single.php?id=<?php echo $row['id']; ?>" class="postagem-titulo">
+              <?php echo htmlspecialchars(mb_strimwidth($row['title'], 0, 20, '...')); ?>
+
+            </a>
+          </h3>
+          <p class="postagem-conteudo">
+            <?php echo substr(strip_tags($row['content']), 0, 100); ?>...
+          </p>
+          <a href="single.php?id=<?php echo $row['id']; ?>" class="btn-leia-mais">Leia mais</a>
+        </div>
+      <?php } ?>
+    </div>
+  </div>
+
+
+
+
+
+
+  <!-- Equipe -->
 
 	<?php
 	session_start();
