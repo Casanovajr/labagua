@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+// Incluir funções de segurança
+require_once 'security.php';
 require 'admin/functions/db.php';
 
 function convertPngToJpg($pngFilePath)
@@ -21,10 +24,10 @@ function convertPngToJpg($pngFilePath)
   imagefill($jpgImage, 0, 0, $white);
   imagecopy($jpgImage, $image, 0, 0, 0, 0, $width, $height);
 
-  // Diretório na Hostinger
+  // Diretório na Hostinger com permissões mais seguras
   $tempDir = $_SERVER['DOCUMENT_ROOT'] . '/temp_images/';
   if (!file_exists($tempDir)) {
-    mkdir($tempDir, 0777, true);
+    mkdir($tempDir, 0755, true); // Permissões mais restritivas
   }
 
   if (!is_writable($tempDir)) {
@@ -50,11 +53,23 @@ function convertPngToJpg($pngFilePath)
 // Processamento do formulário
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   try {
-    $nome = $_POST['nome'];
-    $cargo = $_POST['cargo'];
-    $lattes = $_POST['lattes'];
+    // Sanitizar entradas
+    $nome = sanitizeInput($_POST['nome']);
+    $cargo = sanitizeInput($_POST['cargo']);
+    $lattes = sanitizeInput($_POST['lattes']);
+    
+    // Validações básicas
+    if (empty($nome) || empty($cargo)) {
+      throw new Exception("Nome e cargo são obrigatórios.");
+    }
+    
+    if (strlen($nome) > 100 || strlen($cargo) > 100) {
+      throw new Exception("Nome e cargo devem ter no máximo 100 caracteres.");
+    }
 
     if (isset($_FILES['foto']) && $_FILES['foto']['error'] == 0) {
+      // Validar arquivo de upload com função de segurança
+      validateFileUpload($_FILES['foto'], ['image/jpeg', 'image/jpg', 'image/png'], 5242880);
       $foto_temp = $_FILES['foto']['tmp_name'];
       $foto_type = $_FILES['foto']['type'];
 

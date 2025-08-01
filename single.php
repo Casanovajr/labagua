@@ -9,18 +9,43 @@ author URL: http://ethredah.github.io
     require_once "admin/functions/db.php";
 
         if (isset($_GET['id'])) {
-        $postid = $_GET['id'];
+        // Validar e sanitizar entrada
+        $postid = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+        
+        if ($postid === false || $postid <= 0) {
+            header('Location:blog.php');
+            exit();
+        }
 
-        $sql = "SELECT * FROM posts WHERE id='$postid'";
-        $query = mysqli_query($connection, $sql);
+        // Query segura com prepared statement
+        $sql = "SELECT * FROM posts WHERE id = ?";
+        if ($stmt = mysqli_prepare($connection, $sql)) {
+            mysqli_stmt_bind_param($stmt, "i", $postid);
+            mysqli_stmt_execute($stmt);
+            $query = mysqli_stmt_get_result($stmt);
+            mysqli_stmt_close($stmt);
+        } else {
+            header('Location:blog.php');
+            exit();
+        }
 
-        $sql2 = "SELECT * FROM comments WHERE blogid=$postid";
-        $query2 = mysqli_query($connection, $sql2);
+        // Query segura para comentários
+        $sql2 = "SELECT * FROM comments WHERE blogid = ?";
+        if ($stmt2 = mysqli_prepare($connection, $sql2)) {
+            mysqli_stmt_bind_param($stmt2, "i", $postid);
+            mysqli_stmt_execute($stmt2);
+            $query2 = mysqli_stmt_get_result($stmt2);
+            mysqli_stmt_close($stmt2);
+        } else {
+            // Se falhar, criar resultado vazio para não quebrar a página
+            $query2 = mysqli_query($connection, "SELECT * FROM comments WHERE 1=0");
+        }
 
       }
 
       else {
         header('Location:blog.php');
+        exit();
       }
 
     ?>

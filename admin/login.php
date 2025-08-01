@@ -1,10 +1,15 @@
 <?php
 ob_start();
-session_start();
+
+// Incluir funções de segurança
+require_once __DIR__ . '/../security.php';
 
 // DATABASE CONNECTION
 // Incluir configuração centralizada
 require_once __DIR__ . '/../config.php';
+
+// Configurar sessão segura
+setupSecureSession();
 
 // A conexão $connection já está disponível através do config.php
 
@@ -14,19 +19,33 @@ $email_err = $password_err = "";
 
 // Processing form data when form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // Check if email is empty
-    if (empty(trim($_POST["email"]))) {
-        $email_err = 'Por favor, insira um endereço de e-mail.';
+    
+    // Verificar rate limiting (proteção contra força bruta)
+    if (!checkRateLimit('login_attempt', 5, 300)) {
+        $email_err = 'Muitas tentativas de login. Tente novamente em 5 minutos.';
+        logSecurity('Login rate limit exceeded', 'WARNING');
     } else {
-        $email = trim($_POST["email"]);
-    }
+        // Check if email is empty
+        if (empty(trim($_POST["email"]))) {
+            $email_err = 'Por favor, insira um endereço de e-mail.';
+        } else {
+            $email = sanitizeInput(trim($_POST["email"]));
+            // Validar formato do email
+            if (!validateEmail($email)) {
+                $email_err = 'Formato de e-mail inválido.';
+            }
+        }
 
-    // Check if password is empty
-    if (empty(trim($_POST['password']))) {
-        $password_err = 'Por favor, digite sua senha.';
-    } else {
-        $password = trim($_POST['password']);
+        // Check if password is empty
+        if (empty(trim($_POST['password']))) {
+            $password_err = 'Por favor, digite sua senha.';
+        } else {
+            $password = trim($_POST['password']);
+            // Validação básica de senha
+            if (strlen($password) < 6) {
+                $password_err = 'A senha deve ter pelo menos 6 caracteres.';
+            }
+        }
     }
 
     // Validate credentials
@@ -52,12 +71,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     if (mysqli_stmt_fetch($stmt)) {
                         if (password_verify($password, $hashed_password)) {
                             // Password is correct, so start a new session and save the email to the session
+                            session_regenerate_id(true); // Regenerar ID da sessão por segurança
                             $_SESSION['email'] = $email;
+                            $_SESSION['last_activity'] = time();
+                            
+                            // Log de login bem-sucedido
+                            logSecurity("Successful login for user: $email", 'INFO');
+                            
                             header("Location: index.php");
                             exit(); // Ensure no further code is executed after redirection
                         } else {
                             // Display an error message if password is not valid
                             $password_err = 'A senha que você digitou não é válida. Por favor, tente novamente.';
+                            
+                            // Log de tentativa de login falhada
+                            logSecurity("Failed login attempt for email: $email", 'WARNING');
                         }
                     }
                 } else {
@@ -116,8 +144,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="white-box">
                 <form class="form-horizontal form-material" id="loginform" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
                     <h3 class="box-title m-b-20">Entrar</h3>
-                    <p style="color:red;"><?php echo $email_err; ?></p>
-                    <p style="color:red;"><?php echo $password_err; ?></p>
+                                            <p style="color:red;"><?php echo sanitizeOutput($email_err); ?></p>
+                        <p style="color:red;"><?php echo sanitizeOutput($password_err); ?></p>
                     <div class="form-group ">
                         <div class="col-xs-12">
                             <input class="form-control" type="email" name="email" required="" placeholder="Email">

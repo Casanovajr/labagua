@@ -2,22 +2,15 @@
 <?php
 
     ob_start();
+    
+    // Incluir funções de segurança
+    require_once "../security.php";
     require_once "functions/db.php";
 
-    // Initialize the session
+    // Verificar autenticação com sessão segura
+    requireAuth('login.php');
 
-    session_start();
-
-    // If session variable is not set it will redirect to login page
-
-    if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
-
-      header("location: login.php");
-
-      exit;
-    }
-
-    $email = $_SESSION['email'];
+    $email = sanitizeOutput($_SESSION['email']);
 
     $sql_posts = "SELECT * FROM posts";
     $query_posts = mysqli_query($connection, $sql_posts);
