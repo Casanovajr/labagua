@@ -1,23 +1,16 @@
 
 <?php
 
-  ob_start();
+      ob_start();
+    
+    // Incluir funções de segurança
+    require_once "../security.php";
     require_once "functions/db.php";
 
-    // Initialize the session
+    // Verificar autenticação com sessão segura
+    requireAuth('login.php');
 
-    session_start();
-
-    // If session variable is not set it will redirect to login page
-
-    if(!isset($_SESSION['email']) || empty($_SESSION['email'])){
-
-      header("location: login.php");
-
-      exit;
-    }
-
-    $email = $_SESSION['email'];
+    $email = sanitizeOutput($_SESSION['email']);
 
     $sql = 'SELECT * FROM posts';
 
@@ -196,13 +189,19 @@
                                          
                                             <thead>
                                                 <tr>
-                                                    <th>
+                                                    <th colspan="4">
                                                         <h4>Recent Blog Posts (<b style="color: orange;"><?php echo mysqli_num_rows($query);?></b>)</h4>
                                                         <?php 
                                                              if (mysqli_num_rows($query)==0) {
                                                     echo "<i style='color:brown;'>Sem postagem ainda :( Faça uma postagem hoje! </i> ";}
                                                         ?>
                                                     </th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Título</th>
+                                                    <th>Conteúdo</th>
+                                                    <th>Data</th>
+                                                    <th>Ações</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -211,11 +210,37 @@
                                                 {
                                               echo
                                               '<tr>
-                                                    <td class="hidden-xs"><a href="post-details.php?id='.$row["id"].'" />'.$row["title"].'</td>
-                                                    <td class="max-texts"> <a href="post-details.php?id='.$row["id"].'" />'.$row["content"].'</td>
-                                                    </td>
+                                                    <td><a href="post-details.php?id='.$row["id"].'">'.$row["title"].'</a></td>
+                                                    <td class="max-texts">'.substr(strip_tags($row["content"]), 0, 100).'...</td>
                                                     <td class="text-right">'.$row["date"].'</td>
+                                                    <td>
+                                                        <a href="post-details.php?id='.$row["id"].'" class="btn btn-info btn-sm">Ver</a>
+                                                        <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#deleteModal'.$row["id"].'">Deletar</button>
+                                                    </td>
                                                 </tr>
+                                                
+                                                <!-- Modal de Confirmação de Exclusão -->
+                                                <div id="deleteModal'.$row["id"].'" class="modal fade" tabindex="-1" role="dialog">
+                                                    <div class="modal-dialog" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Confirmar Exclusão</h4>
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <p>Você tem certeza que deseja deletar a postagem "<strong>'.$row["title"].'</strong>"?</p>
+                                                                <p><small class="text-muted">Esta ação não pode ser desfeita e também deletará todos os comentários associados.</small></p>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                                                                <form method="post" action="functions/del_post.php" style="display: inline;">
+                                                                    <input type="hidden" name="id" value="'.$row["id"].'">
+                                                                    <button type="submit" class="btn btn-danger">Deletar</button>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                                 ';
 
                                                 }
